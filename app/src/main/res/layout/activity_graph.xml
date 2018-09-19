@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:divider="@drawable/divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <devlight.io.library.ArcProgressStackView
+            android:id="@+id/apsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:apsv_preview_colors="@array/devlight"
+            app:apsv_model_bg_enabled="true"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="View Size"/>
+
+                <SeekBar
+                    android:id="@+id/pb_view_size"
+                    style="@style/PreviewStyle"
+                    android:max="100"
+                    android:progress="100"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_animating"
+                        style="@style/PreviewStyle"
+                        android:checked="true"
+                        android:text="Animating"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_shadowing"
+                        style="@style/PreviewStyle"
+                        android:text="Shadowing"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_rounding"
+                        style="@style/PreviewStyle"
+                        android:text="Rounding"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_dragging"
+                        style="@style/PreviewStyle"
+                        android:checked="true"
+                        android:text="Dragging"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_leveling"
+                    style="@style/PreviewStyle"
+                    android:text="Leveling"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_use_custom_typeface"
+                    style="@style/PreviewStyle"
+                    android:checked="true"
+                    android:text="Use custom typeface"/>
+
+                <Button
+                    android:id="@+id/btn_text_color"
+                    style="@style/PreviewStyle"
+                    android:text="TEXT COLOR"
+                    android:textColor="#fff"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wrapper_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Shadow distance"/>
+
+                <SeekBar
+                    android:id="@+id/pb_shadow_distance"
+                    style="@style/PreviewStyle"
+                    android:max="50"
+                    android:progress="5"/>
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Shadow angle"/>
+
+                <SeekBar
+                    android:id="@+id/pb_shadow_angle"
+                    style="@style/PreviewStyle"
+                    android:max="360"
+                    android:progress="90"/>
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Shadow radius"/>
+
+                <SeekBar
+                    android:id="@+id/pb_shadow_radius"
+                    style="@style/PreviewStyle"
+                    android:max="50"
+                    android:progress="20"/>
+
+                <Button
+                    android:id="@+id/btn_shadow_color"
+                    style="@style/PreviewStyle"
+                    android:text="SHADOW COLOR"
+                    android:textColor="#fff"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wrapper_animation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Animation duration"/>
+
+                <SeekBar
+                    android:id="@+id/pb_animation_duration"
+                    style="@style/PreviewStyle"
+                    android:max="1000"
+                    android:progress="500"/>
+
+                <CheckBox
+                    android:id="@+id/cb_use_overshoot_interpolator"
+                    style="@style/PreviewStyle"
+                    android:text="Use overshoot interpolator"/>
+
+                <Button
+                    android:id="@+id/btn_animate"
+                    style="@style/PreviewStyle"
+                    android:text="ANIMATE"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Draw width"/>
+
+                <SeekBar
+                    android:id="@+id/pb_draw_width"
+                    style="@style/PreviewStyle"
+                    android:max="100"
+                    android:progress="75"/>
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Model offset"/>
+
+                <SeekBar
+                    android:id="@+id/pb_model_offset"
+                    style="@style/PreviewStyle"
+                    android:max="100"
+                    android:progress="50"/>
+
+                <CheckBox
+                    android:id="@+id/cb_show_model_bg"
+                    style="@style/PreviewStyle"
+                    android:checked="true"
+                    android:text="Show model background"/>
+
+                <CheckBox
+                    android:id="@+id/cb_use_gradient"
+                    style="@style/PreviewStyle"
+                    android:text="Use gradient"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Start angle"/>
+
+                <SeekBar
+                    android:id="@+id/pb_start_angle"
+                    style="@style/PreviewStyle"
+                    android:max="360"
+                    android:progress="270"/>
+
+                <TextView
+                    style="@style/PreviewStyle"
+                    android:text="Sweep angle"/>
+
+                <SeekBar
+                    android:id="@+id/pb_sweep_angle"
+                    style="@style/PreviewStyle"
+                    android:max="360"
+                    android:progress="360"/>
+
+                <CheckBox
+                    android:id="@+id/cb_use_vertical_orientation"
+                    style="@style/PreviewStyle"
+                    android:text="Use vertical orientation"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_presentation"
+                style="@style/PreviewStyle"
+                android:text="PRESENTATION"/>
+
+            <Button
+                android:id="@+id/btn_reset"
+                style="@style/PreviewStyle"
+                android:text="RESET"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

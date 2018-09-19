@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PS Narayanan</string>
+    <string name="intro">Co-Founder &amp; CTO NeOnSec. Currently pursuing Masters in Computer Science at Amrita School
+        of Engineering with a strong background in Python,Android,Java, C#, .Net, and PHP. Cyber Security Enthusiast
+        and Reverse Engineer.</string>
+    <string name="nskills_n">Skills</string>
+    <string name="introduction_n">About Me</string>
+    <string name="ps_narayanan">PS Narayanan</string>
+    <string name="nachievements_n">Achievements</string>
+    <string name="master_of_computer_applications">Master of Computer Applications</string>
+</resources>
